@@ -7,7 +7,7 @@ import { editController, updateController, deleteController } from '../controlle
 route.get('/', homeController)
 route.post('/', createController)
 route.get('/read', readController)
-route.get('edit/:id', editController);
+route.get('/edit/:id', editController);
 route.post('/update/:id', updateController);
 route.get('/delete/:id', deleteController);
 

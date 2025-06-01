@@ -17,7 +17,7 @@ res.render('edit', {record:record})
 }
 const updateController = async(req,res)=>{
     try {
-        const updatedRecord = await StudentModel.findByIdAndUpdate(req.params.id)
+        const updatedRecord = await StudentModel.findByIdAndUpdate(req.params.id, req.body, {new: true, useFindAndModify: false})
         if(updatedRecord){
          res.redirect('/')   
         }else{
